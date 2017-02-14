@@ -1,0 +1,125 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .header .navigation ul{
+        float: none;
+        display: inline-block;
+    }
+    
+    .header .navigation ul li a{
+        padding: 0 25px 5px;
+    }
+    
+    .header .logo h1{
+        margin-left: 20px;
+    }
+    
+    .main .main_wrapper .main_desc .main_centred .main_text h2{
+        margin-top: 105px;
+        font-size: 40px;
+    }
+    
+    .main .main_wrapper .main_desc .main_centred .main_text p{
+        margin: 10px 0 20px;
+    }
+    
+    .icons_wrap .col-sm-4{
+        margin-bottom: 30px;
+    }
+    
+    .icons_wrap .container{
+        padding: 50px 20px;
+    }
+    
+    .media .container{
+        padding-top: 30px;
+    }
+    
+    .media .container h4{
+        font-size: 22px;
+    }
+    
+    .social{
+        padding: 40px 0;
+    }
+    
+    .work{
+        padding: 40px 0;
+    }
+    
+    .work .brand{
+        padding: 10px 50px;
+    }
+    
+    .join{
+        padding: 40px 0;
+    }
+    
+    .join button{
+        width: 50%;
+    }
+    
+    .footer{
+        padding: 40px 0;
+    }
+    
+    #popUp{
+        width: 280px;
+        padding: 55px 0;
+        height: 280px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .header .container{
+        padding: 0;
+    }
+    
+    .header .navigation ul li a{
+        font-size: 12px;
+        padding: 0px 10px 6px;
+    }
+    
+    .main .main_wrapper .main_desc .main_centred .main_text button{
+        width: 50%;
+    }
+    
+    .join button{
+        width: 85%;
+    }
+    
+    .social ul li + li{
+        margin-left: 12px;
+    }
+    
+    .footer .col-xs-4,
+    .footer .col-xs-2{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer h6{
+        margin: 60px 0 0 0;
+    }
+    
+    .footer{
+        padding: 0 0 40px 0;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,464 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+html {height: 100%;}
+body {
+    position: relative;
+	height: 100%;
+	font: 14px/18px "OpenSansRegular", Tahoma, sans-serif;
+	color: #000;
+	background-color: #fff;
+    text-align: center;
+}
+ol, ul {list-style: none;}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+	content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.left {float:left;}
+.right {float:right;}
+
+
+//  ------------- end general style -----------
+
+.header{
+    .logo{
+        h1{
+            font-family: "Flatform";
+            font-size: 40px;
+            line-height: 65px;
+            margin: 0;
+        }
+    }
+    
+    .navigation{
+        ul{
+            margin: 0;
+            float: right;
+            li{
+                float: left;
+                text-align: center;
+                a{
+                    position: relative;
+                    display: block;
+                    padding: 15px 25px;
+                    color: #4d4d4d;
+                    text-decoration: none;
+                    line-height: 35px;
+                    transition: all 2s;
+                    z-index: 20;
+                }
+                
+                a::after{
+                    content: "";
+                    display: none;
+                    width: 95%;
+                    height: 1px;
+                    margin: -6px auto 0;
+                    background-color: #4d4d4d;
+                }
+                
+                a:hover::after{
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    #btn-toogle{
+        z-index: 20;
+        span{
+            font-size: 20px;
+        }
+    }
+}
+
+.main{
+    background-image: url(../img/big-bg.jpg);
+    background-size: cover;
+    height: 90vh;
+    
+    .main_wrapper{
+        display: table;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;  
+        z-index: 0;
+        .main_desc{
+            display: table-row;
+            .main_centred{
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                .main_text{
+                    display: inline-block;
+                    h2{
+                        font-size: 50px;
+                        font-family: "Satellite";
+                        color: #4d4d4d;
+                    }
+
+                    p{
+                        font-size: 16px;
+                        font-family: "OpenSansRegular";
+                        animation-delay: .4s;
+                        margin: 30px 0 40px;
+                        color: #4d4d4d;
+                    }
+                    
+                    button{
+                        width: 25%;
+                        height: 50px;
+                        background-color: #4d4d4d;
+                        border: none;
+                        @include border-radius(25px);
+                        font-family: "OpenSansSemiBold";
+                        color: 18px;
+                        color: #ffffff;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.icons_wrap{    
+    .container{
+        border-bottom: 1px solid #e7e7e7;
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    .col-sm-4{
+        padding: 0 30px;
+    }
+    
+    .icons{
+        display: inline-block;
+        background-image: url(../img/icons.png);
+        background-repeat: no-repeat;
+        width: 81px;
+        height: 71px;
+        margin-bottom: 30px;
+    }
+    
+    .cup{
+        background-position: 10px 0;
+    }
+    
+    .clock{
+        background-position: -71px 0;
+    }
+    
+    .ixs{
+        background-position: -157px 0
+    }
+    
+    h5{
+        font-size: 22px;
+        text-transform: uppercase;
+        font-family: "OpenSansBold";
+        color: #4d4d4d;
+    }
+    
+    p{
+        font-size: 14px;
+        line-height: 22px;
+        font-family: "OpenSansRegular";
+        color: #727272;
+    }
+}
+
+.media{
+    .container{
+        padding-top: 75px;
+        border-bottom: 1px solid #e7e7e7;
+        
+        h4{
+            font-size: 30px;
+            line-height: 58px;
+            font-family: "OpenSansBold";
+            text-transform: uppercase;
+            color: #4d4d4d;
+        }
+        
+        p{
+            color: #727272;
+            font-size: 16px;
+            line-height: 22px;
+            width: 55%;
+            margin: 0 auto;
+            font-family: "OpenSansRegular";
+        }
+        
+        .video{
+            max-width: 690px;
+            min-width: 320px;
+            width: 57%;
+            height: 380px;
+            margin: 80px auto 0;
+            background-image: url(../img/video.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+    }
+}
+
+.work{
+    padding: 90px 0;
+    h5{
+        text-transform: uppercase;
+        font-family: "OpenSansSemibold";
+        font-size: 30px;
+        line-height: 58px;
+        color: #4d4d4d;
+    }
+    
+    .brand{
+        padding: 10px;
+        
+        .shape{
+            padding-top: 130px;
+            height: 320px;
+            background-color: #F7F7F7;
+            position: relative;
+        }
+        
+        p{
+            text-transform: uppercase;
+            color: #d2d1d1;
+            font-family: "OpenSansBoldItalic";
+            font-size: 20px;
+        }
+        
+        p.bot{
+            font-size: 10px;
+            font-family: "OpenSansRegular";
+            color: #d2d1d1;
+            letter-spacing: 1px;
+            text-transform: none;
+            margin-top: -15px;
+        }
+        
+        .brand_hov{
+            position: absolute;
+            bottom: 0;
+            display: block;
+            opacity: 0;
+            height: 18.75%;
+            width: 100%;
+            background-color: #575757;
+            transition: all 1s;
+            p{
+                color: #fff;
+                font-size: 16px;
+                line-height: 60px;
+                font-family: "OpenSansSemibold";
+            }
+        }
+    }
+    
+    .brand:hover .brand_hov{
+            opacity: 1;
+    }
+}
+
+.join{
+    background-color: #F5F5F5;
+    padding: 100px 0 85px;
+    border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+    position: relative;
+    h5{
+        font-size: 30px;
+        line-height: 58px;
+        color: #4d4d4d;
+        font-family: "OpenSansSemibold";
+        text-transform: uppercase;
+    }
+    
+    p{
+        font-family: "OpenSansRegular";
+        font-size: 14px;
+        line-height: 25px;
+        color: #717171;
+        margin: 20px 0 50px;
+    }
+    
+    button{
+        font-size: 16px;
+        line-height: 50px;
+        color: #4d4d4d;
+        background-color: transparent;
+        @include border-radius(24px);
+        width: 30%;
+        height: 50px;
+        border: 2px solid #4d4d4d;
+        text-transform: uppercase;
+        a{
+            color: #4d4d4d;
+            text-decoration: none;
+        }
+    }
+}
+
+.social{
+    padding: 100px 0;
+    text-align: center;
+    ul{
+        display: inline-block;
+        li{
+            float: left;
+        }
+        
+        li+li{
+            margin-left: 60px;
+        }
+        
+        a{
+            display: block;
+            border: 2px solid #4d4d4d;
+            width: 70px;
+            height: 70px;
+            box-sizing: border-box;
+            
+            i{
+                font-size: 20px;
+                line-height: 66px;
+                color: #4d4d4d;
+            }
+        }
+        
+        a:hover{
+            background-color: #55ACEE;
+            border: none;
+            i{
+                color: #fff;
+            }
+        }
+    }
+}
+
+.footer{
+    background-color: #3B3B3B;
+    padding: 90px 0 100px;
+    text-align: left;
+    
+    h6{
+        color: #ebebeb;
+        font-size: 16px;
+        font-family: "OpenSansSemibold";
+        margin-bottom: 40px;
+    }
+    
+    .diffrent{
+        color: #B5B5B5;
+        font-family: "OpenSansSemibold";
+    }
+    
+    p,
+    a{
+        color: #ebebeb;
+        font-size: 14px;
+        line-height: 30px;
+        margin: 0;
+        padding: 0;
+        width: 95%;
+        font-family: "OpenSansRegular";
+    }
+    a{
+        text-decoration: underline;
+    }
+    
+    a:hover{
+        color: #ebebeb;
+        text-decoration: none;
+    }
+    
+    .navg a{
+        text-decoration: none;
+    }
+}
+
+.hidd{
+    display: none;
+    background-color: rgba(0,0,0,.5);
+    height: 100hv;
+    padding-top: 15%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#popUp {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 85px 75px 80px; 
+    button,
+    input{
+        width: 250px;
+        height: 50px;
+        border: 1px solid #edebeb;
+        background-color: #fff;
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    input::-webkit-input-placeholder{
+        font-size: 12px;
+        color: #d1d0d0;
+        font-family: "OpenSansRegular";
+    }
+    
+    button:last-child{
+        text-transform: uppercase;
+        text-align: center;
+        font-family: "OpenSansSemibold";
+        border: 2px solid #424242;
+        color: #424242;
+        padding: 0;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+}
+
+.fancybox-skin{
+        padding: 0 !important;
+}
+
+.fancybox-close{
+    width: 40px;
+    height: 40px;
+    @include border-radius(50%);
+}
+
